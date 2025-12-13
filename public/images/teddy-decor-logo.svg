@@ -1,0 +1,26 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Tent Top -->
+  <path d="M100 40 L160 100 L40 100 Z" fill="#D4AF37" stroke="#1A4D2E" stroke-width="2"/>
+
+  <!-- Tent Sides -->
+  <rect x="45" y="100" width="110" height="80" fill="#F5E6D3" stroke="#1A4D2E" stroke-width="2"/>
+
+  <!-- Decorative Drapes Left -->
+  <path d="M50 100 Q55 120 50 140" stroke="#D4AF37" stroke-width="3" fill="none"/>
+  <path d="M60 100 Q65 120 60 140" stroke="#D4AF37" stroke-width="3" fill="none"/>
+
+  <!-- Decorative Drapes Right -->
+  <path d="M150 100 Q145 120 150 140" stroke="#D4AF37" stroke-width="3" fill="none"/>
+  <path d="M140 100 Q135 120 140 140" stroke="#D4AF37" stroke-width="3" fill="none"/>
+
+  <!-- Center Entrance -->
+  <rect x="85" y="120" width="30" height="60" fill="#1A4D2E" opacity="0.3"/>
+
+  <!-- Decorative Top Trim -->
+  <path d="M40 100 L160 100" stroke="#D4AF37" stroke-width="4"/>
+
+  <!-- Tables (simplified) -->
+  <circle cx="70" cy="150" r="4" fill="#D4AF37"/>
+  <circle cx="100" cy="145" r="4" fill="#D4AF37"/>
+  <circle cx="130" cy="150" r="4" fill="#D4AF37"/>
+</svg>
