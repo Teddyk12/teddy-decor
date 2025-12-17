@@ -1,202 +1,113 @@
-# 🎊 Teddy Decor - Event Planning Website
+# 🎉 Teddy Decor - Event Decor Website
 
-**Professional multi-page event decor and planning website with full admin dashboard**
-
----
-
-## 🎯 Current Status
-
-✅ **Website Complete** - All pages built and functional
-✅ **Your Branding** - Exact logo with dark green + gold colors
-✅ **Professional Design** - No watermarks, clean UI
-⚠️ **Setup Required** - Need to configure Supabase + Web3Forms (40 minutes)
-
----
+**Status:** Booking Approval Workflow Complete! ✅
 
 ## 🚀 Quick Start
 
-### For First-Time Setup:
+**Your website is live at:** https://teddydecor.com
 
-1. **Read this first**: `YOUR_NEXT_STEPS.md` ← Action plan
-2. **Then follow**: `COMPLETE_SETUP_CHECKLIST.md` ← Step-by-step guide
-3. **Run deployment**: `./force-deploy.sh` (Mac/Linux) or `force-deploy.bat` (Windows)
-4. **Test**: Visit https://teddydecor.com
+**To activate the booking approval system, you need to:**
 
-### For Development:
+1. **Run SQL in Supabase** (5 minutes)
+   - Open `AVAILABILITY_CALENDAR_SETUP.sql`
+   - Copy and run in Supabase SQL Editor
+   - See `YOUDO.md` for detailed steps
 
-```bash
-# Install dependencies
-bun install
+2. **Add Web3Forms Key to Vercel** (3 minutes)
+   - Get key from https://web3forms.com
+   - Add to Vercel environment variables
+   - See `YOUDO.md` for detailed steps
 
-# Start dev server
-bun run dev
-
-# Build for production
-bun run build
-
-# Deploy
-git push  # Auto-deploys to Vercel
-```
+**📖 Documentation:**
+- `BOOKING_WORKFLOW_COMPLETE.md` - Complete guide with testing checklist
+- `YOUDO.md` - Simple 2-step instructions
+- `START_HERE.md` - Quick reference
 
 ---
 
-## 📁 Project Structure
+## ✅ What's Implemented
 
-```
-teddy-decor/
-├── src/
-│   ├── app/              # Next.js pages
-│   │   ├── page.tsx      # Homepage
-│   │   ├── services/     # Services page
-│   │   ├── gallery/      # Public gallery
-│   │   ├── booking/      # Booking form
-│   │   ├── contact/      # Contact form
-│   │   ├── admin/        # Admin dashboard
-│   │   └── api/          # API routes
-│   ├── components/       # React components
-│   └── lib/              # Supabase client
-├── public/images/        # Images and assets
-├── COMPLETE_SETUP_CHECKLIST.md  # Main setup guide ⭐
-├── YOUR_NEXT_STEPS.md    # Action plan ⭐
-├── SOLUTION_SUMMARY.md   # Troubleshooting guide
-└── force-deploy.sh       # Deployment script
-```
+### Booking Approval Workflow
+- ✅ Availability calendar (admin controls which dates are available)
+- ✅ Booking form with real-time availability checking
+- ✅ Admin approval workflow (confirm/reject with personal messages)
+- ✅ Automated email notifications (confirmation/rejection)
+- ✅ Overbooking prevention
+- ✅ Complete audit trail
+
+### Website Features
+- ✅ 19 pages including home, services, gallery, about, contact
+- ✅ Admin dashboard with authentication
+- ✅ Gallery management (upload, view, delete)
+- ✅ Supabase cloud storage integration
+- ✅ Logo customization
+- ✅ Password management
+- ✅ Responsive design (mobile, tablet, desktop)
+- ✅ Green/Gold branding
 
 ---
 
-## ✨ Features
+## 📋 Admin Pages
 
-### Public Pages
-- **Homepage** - Hero section with balloon decoration background
-- **Services** - Event types (Weddings, Birthdays, Baby Showers, etc.)
-- **Gallery** - Photo/video portfolio with category filters
-- **Booking** - Comprehensive event booking form
-- **Contact** - Quick contact form
-- **Our Process** - How you work with clients
-- **About** - Your story and team
-
-### Admin Dashboard (Password Protected)
-- **Gallery Management** - Upload/delete photos & videos
-- **Bookings** - View and manage all bookings
-- **Contact Inquiries** - View contact form submissions
-- **Environment Diagnostics** - Check configuration status
-
-### Backend Features
-- **Supabase Integration** - Cloud database + storage
-- **Web3Forms** - Email notifications
-- **LocalStorage Fallback** - Works without cloud setup
-- **Environment Diagnostics** - Built-in troubleshooting
+- `/admin` - Dashboard overview
+- `/admin/bookings` - Manage booking requests (approve/reject)
+- `/admin/availability` - Control booking calendar (open/close dates)
+- `/admin/calendar` - Event calendar view
+- `/admin/gallery` - Upload and manage photos
+- `/admin/home-images` - Customize homepage images
+- `/admin/logo` - Upload custom logo
+- `/admin/password` - Change admin password
+- `/admin/settings` - Account settings
 
 ---
 
-## 🎨 Branding
+## 🎯 How Booking Workflow Works
 
-- **Logo**: Your exact Teddy Decor logo (dark green + gold tent design)
-- **Colors**: Pink/Rose (#E63462), Gold (#D4AF37), Dark Green (#1A4D2E)
-- **Typography**: Professional, elegant fonts
-- **Hero Image**: Professional balloon decorations (no watermarks)
+### Customer Experience:
+1. Visits `/booking` page
+2. Fills out form, selects date
+3. System shows: "✓ Date available (2 slots remaining)"
+4. Submits booking → Status: "Pending"
+5. Sees message: "We'll review within 24 hours"
+6. Receives confirmation email when you approve
 
----
-
-## 🔧 Setup Requirements
-
-### Required Accounts (Free):
-1. **Web3Forms** - Email notifications
-   - Create at: https://web3forms.com
-   - Email: yonigoteddy@gmail.com
-   - Time: 10 minutes
-
-2. **Supabase** - Database + Storage
-   - Create at: https://supabase.com
-   - Region: US West (or closest)
-   - Time: 15 minutes
-
-3. **Vercel** - Hosting (already set up)
-   - Domain: https://teddydecor.com
-   - Custom domain configured
-
-### Environment Variables Needed:
-```bash
-NEXT_PUBLIC_WEB3FORMS_KEY=your-key-here
-NEXT_PUBLIC_SUPABASE_URL=https://xxx.supabase.co
-NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbG...
-```
-
-**📋 See `COMPLETE_SETUP_CHECKLIST.md` for complete instructions**
+### Your Experience:
+1. See "Pending (1)" notification in admin
+2. Review booking details
+3. Click "Confirm" or "Reject"
+4. Add personal message
+5. System sends beautiful email
+6. Availability updates automatically
 
 ---
 
-## 📧 Contact
+## 🛠️ Tech Stack
 
-- **Website**: www.teddydecor.com
-- **Email**: yonigoteddy@gmail.com
-- **Phone**: (206) 739-2365
-
----
-
-## 📚 Documentation
-
-| Document | Purpose |
-|----------|---------|
-| **YOUR_NEXT_STEPS.md** | What to do next (start here!) |
-| **COMPLETE_SETUP_CHECKLIST.md** | Complete setup guide |
-| **SOLUTION_SUMMARY.md** | Troubleshooting environment variables |
-| **FORCE_FRESH_DEPLOYMENT.md** | How to trigger deployment |
-| **SUPABASE_SETUP.md** | Detailed Supabase instructions |
-| **HOW_TO_ADD_YOUR_LOGO.md** | Logo customization guide |
+- **Framework:** Next.js 15 (App Router)
+- **Styling:** Tailwind CSS
+- **Database:** Supabase (PostgreSQL)
+- **Storage:** Supabase Storage
+- **Email:** Web3Forms
+- **Deployment:** Vercel
+- **Domain:** teddydecor.com
 
 ---
 
-## 🎯 Next Steps
+## 📞 Support
 
-**👉 Open `YOUR_NEXT_STEPS.md` to begin!**
-
-1. Set up Web3Forms (10 min)
-2. Set up Supabase (15 min)
-3. Add environment variables to Vercel (5 min)
-4. Force fresh deployment (2 min)
-5. Test everything (5 min)
-
-**Total time: ~40 minutes**
+**Need help?**
+- Check `BOOKING_WORKFLOW_COMPLETE.md` for complete guide
+- Check `TROUBLESHOOTING.md` for common issues
+- All documentation in project root
 
 ---
 
-## 🚀 Deployment
+**🎉 Ready to accept bookings professionally!**
 
-### Automatic Deployment:
-- Every `git push` automatically deploys to Vercel
-- Production URL: https://teddydecor.com
-- Build time: ~2-5 minutes
+Once you complete the 2 setup steps, you'll have:
+- Full control over booking availability
+- Professional email communications
+- No risk of double-bookings
+- Automated workflow that saves time
 
-### Manual Deployment:
-```bash
-# Use deployment script
-./force-deploy.sh          # Mac/Linux
-force-deploy.bat           # Windows
-
-# Or manual
-git add .
-git commit -m "Your message"
-git push
-```
-
----
-
-## 🆘 Support
-
-If you get stuck:
-1. Check `COMPLETE_SETUP_CHECKLIST.md` → Troubleshooting
-2. Check browser console (F12) for errors
-3. Verify environment variables in Vercel
-4. Contact Same support with screenshots
-
----
-
-## 📄 License
-
-© 2025 Teddy Decor. All rights reserved.
-**Creating unforgettable moments, one detail at a time.**
-
----
-
-**Built with ❤️ using Next.js, TypeScript, Tailwind CSS, Supabase, and Vercel**
+See `YOUDO.md` to get started!
